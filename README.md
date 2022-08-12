@@ -25,6 +25,7 @@ dependencies {
     implementation files("aars/xxxx.aar")
 ```
 目录结构如图：
+
 ![image](https://user-images.githubusercontent.com/20922322/184358740-5cd405cf-851d-4a16-8842-97ec7efb56ff.png)
 
 ## 方式2：
