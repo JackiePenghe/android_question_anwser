@@ -18,3 +18,12 @@
     <item name="android:tint">@color/black</item
   </style>
 ```
+
+# Button的background属性无效
+
+```xml
+  <!--  加入app:backgroundTint="@null"屏蔽backgroundTint的影响即可  -->
+  <Button
+       app:backgroundTint="@null"
+       .../>
+```
