@@ -2,6 +2,19 @@
 安卓问题与解决方案记录
 
 # 引入aar包(jar包同理)
+
+在需要引入包的module的build.gradle中加入这些依赖库，加入的位置如下
+
+```xml
+android {
+    ...
+}
+dependencies {
+    ...
+    //在此处添加依赖
+}
+```
+
 ## 方式1：
 ```xml
     //引入指定的aar库(下方的aars表示与module目录中"src"文件夹同级的目录名，可以是libs，也可以是新建的其它文件目录)
