@@ -1,5 +1,5 @@
 # android_question_anwser
-安卓问题与解决方案记录
+安卓常见问题与解决方案记录
 有新的问题可以提到issue中，我会整理后更新这些问题
 还有一些我自己用过比较好用的库，我也整理到了另一个仓库中，有需要可以前往查看 [https://github.com/JackiePenghe/android_usefull_responsitory](https://github.com/JackiePenghe/android_usefull_responsitory)
 
@@ -59,4 +59,22 @@ implementation fileTree(include: ['*.aar'], dir: 'aars')
   <Button
        app:backgroundTint="@null"
        .../>
+```
+
+# 判断当前Activity是否用户可见
+
+java
+
+```java
+    public boolean isActivityVisible(Activity activity){
+        return activity.getWindow().getDecorView().getVisibility() == View.VISIBLE;
+    }
+```
+
+kotlin
+
+```lotlin
+    fun isActivityVisible(activity:Activity):Boolean{
+        return activity.window.decorView.visibility == View.VISIBLE
+    }
 ```
