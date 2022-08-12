@@ -1,7 +1,7 @@
 # android_question_anwser
 安卓问题与解决方案记录
 
-# 更改Activity supportactionbar/actionbar的“3点菜单”按钮（溢出菜单图标）颜色
+# 更改Activity supportActionbar/actionbar的“3点菜单”按钮（溢出菜单图标）颜色
 
 更改style文件
 
