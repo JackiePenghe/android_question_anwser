@@ -74,7 +74,7 @@ java
 
 kotlin
 
-```lotlin
+```kotlin
     fun isActivityVisible(activity:Activity):Boolean{
         return activity.window.decorView.visibility == View.VISIBLE
     }
