@@ -59,7 +59,7 @@ implementation fileTree(include: ['*.aar'], dir: 'aars')
    <!--  溢出菜单的style  -->
   <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
      <!--  溢出菜单的颜色  -->
-    <item name="android:tint">@color/black</item
+    <item name="android:tint">@color/black</item>
   </style>
 ```
 
