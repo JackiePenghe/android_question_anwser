@@ -114,3 +114,14 @@ kotlin
         return activity.window.decorView.visibility == View.VISIBLE
     }
 ```
+
+# 绑定 TabLayout与Fragment
+
+使用TabLayoutMediator类即可
+
+```kotlin
+ TabLayoutMediator(tabLayout,viewPager2,{ tab, position ->
+           //TODO configure the tab for the page at position
+            //TODO 为当前位置的tab配置一些基本属性
+        }) 
+```
