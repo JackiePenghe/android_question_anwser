@@ -56,11 +56,26 @@ implementation fileTree(include: ['*.aar'], dir: 'aars')
     <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
   </style>
   
-   <!--  溢出菜单的style  -->
+   <!--  溢出菜单的按钮的style  -->
   <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
-     <!--  溢出菜单的颜色  -->
+     <!--  溢出菜单按钮的颜色  -->
     <item name="android:tint">@color/black</item>
   </style>
+```
+
+# 更改Activity supportActionbar/actionbar 菜单选项文本的颜色
+
+```xml
+ <!--  这是程序的主题  -->
+  <style name="AppTheme" parent="....." >
+    <!--  更改溢出菜单的style  -->
+    <item name="android:itemTextAppearance">@style/MyCustomMenuTextAppearance</item>
+  </style>
+
+    <!--  溢出菜单选项的item的style  -->
+    <style name="MyCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/overflow_text_color</item>
+    </style>
 ```
 
 # Button的background属性无效
