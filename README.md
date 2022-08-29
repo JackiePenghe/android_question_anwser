@@ -72,10 +72,20 @@ implementation fileTree(include: ['*.aar'], dir: 'aars')
     <item name="android:itemTextAppearance">@style/MyCustomMenuTextAppearance</item>
   </style>
 
-    <!--  溢出菜单选项的item的style  -->
-    <style name="MyCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
-        <item name="android:textColor">@color/overflow_text_color</item>
-    </style>
+<!--  溢出菜单选项的item的style  -->
+<style name="MyCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+    <item name="android:textColor">@color/overflow_text_color</item>
+</style>
+```
+
+# 通过更改主题变更Button的默认文本颜色
+
+```xml
+ <!--  这是程序的主题  -->
+  <style name="AppTheme" parent="....." >
+    <!--  更改Button按钮的文本颜色（注意，此颜色不仅仅用于Button的文本颜色）  -->
+    <item name="colorOnPrimary">@color/color_on_secondary</item>
+  </style>
 ```
 
 # Button的background属性无效
