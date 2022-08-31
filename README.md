@@ -149,7 +149,7 @@ java
 ```
 
 
-对应的其它字符还包括如下
+#  常用xml转义字符及表示方式
 
 &160#;  不断行的空白（1个字符宽度）
 
@@ -159,12 +159,12 @@ java
 
 &8201#;  窄空白（小于1个字符宽度）
 
-&lt;  小于号(<)  &amp;lt;
+&amp;lt; &lt;  小于号  
 
-&gt;  大于号(>)  &amp;gt;
+&amp;gt; &gt;  大于号  
 
-&amp;  与符号(&)  &amp;amp;
+&amp;amp; &amp;  与符号  
 
-&apos;  单引号(')  &amp;apos;
+&amp;apos; &apos;  单引号  
 
-&quot;  双引号(")  &amp;quot;
+&amp;quot; &quot;  双引号  
