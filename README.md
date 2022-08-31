@@ -119,9 +119,48 @@ kotlin
 
 使用TabLayoutMediator类即可
 
+kotlin
+
 ```kotlin
  TabLayoutMediator(tabLayout,viewPager2,{ tab, position ->
            //TODO configure the tab for the page at position
             //TODO 为当前位置的tab配置一些基本属性
         }) 
 ```
+
+java
+
+```java
+ new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
+    //TODO configure the tab for the page at position
+    //TODO 为当前位置的tab配置一些基本属性
+        });
+```
+
+# string.xml 前后的' '(空格字符)会被trim
+
+使用 &#160; 替换单个 ' ',有几个替换几个
+
+```xml
+    <!--空格无效-->
+    <string name="test"> 测试文本 </string>
+    <!--空格有效-->
+    <string name="test">&#160;测试文本&#160;</string>
+```
+
+
+对应的其它字符还包括如下
+
+&160#;  不断行的空白（1个字符宽度）
+
+&8194#;  半个空白（1个字符宽度）
+
+&8195#;  一个空白（2个字符宽度）
+
+&8201#;  窄空白（小于1个字符宽度）
+
+&lt;  小于号(<)
+&gt;  大于号(>)
+&amp;  与符号(&)
+&apos;  单引号(')
+&quot;  双引号(")
