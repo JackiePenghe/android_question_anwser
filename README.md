@@ -159,8 +159,12 @@ java
 
 &8201#;  窄空白（小于1个字符宽度）
 
-&lt;  小于号(<)
-&gt;  大于号(>)
-&amp;  与符号(&)
-&apos;  单引号(')
-&quot;  双引号(")
+&lt;  小于号(<)  &amp;lt;
+
+&gt;  大于号(>)  &amp;gt;
+
+&amp;  与符号(&)  &amp;amp;
+
+&apos;  单引号(')  &amp;apos;
+
+&quot;  双引号(")  &amp;quot;
