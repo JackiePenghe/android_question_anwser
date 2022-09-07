@@ -151,3 +151,58 @@ java
 &apos;      单引号  
 &quot;      双引号
 ```
+
+### 更改Android Studio生成的APK文件的名称
+
+在项目的主module的build.gradle中配置
+
+```gradle
+android {
+   ···
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        applicationVariants.all {
+            variant ->
+                variant.outputs.all {
+                    output -> outputFileName = "你想更改的应用名称.apk"
+                }
+        }
+    }
+  ···
+}
+```
+
+### 配置签名
+
+在项目的主module的build.gradle中配置
+
+```gradle
+android {
+   ···
+    signingConfigs {
+        def alias = "alias" //签名文件内，签名的别名
+        def password = "aliasPassword" //签名文件内，指定签名的别名后，该签名的密码
+        def filePath = "signture.jks"  //签名文件路径，默认目录与build.gradle文件路径一致，可用 "./" 或 "../"配置相对路径，也可直接填入完整的绝对路径
+        def storePassword1 = "signtureFilePassword"  //签名文件密码
+        
+        //debug签名
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(storePassword1)
+        }
+        //release签名，可手动更改，配置与debug时不同的参数
+        release {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(storePassword1)
+        }
+    }
+   ···
+}
+```
