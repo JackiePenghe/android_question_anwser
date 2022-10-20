@@ -223,4 +223,10 @@ protected void onStart() {
         });
     super.onStart();
 }
+
+private void toTargetActivity(){
+    Intent intent = new Intent(this,TargetActivity.class);
+    //使用 activityResultLauncher 替代 startActivityForResult
+    activityResultLauncher.launch(intent);
+}
 ```
