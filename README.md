@@ -206,3 +206,21 @@ android {
    ···
 }
 ```
+
+### AppcompateActivity.startActivityForResult被弃用
+```java
+//声明 ActivityResultLauncher
+private ActivityResultLauncher<Intent> activityResultLauncher;
+
+//重写onStart方法，并在该方法中注册 ActivityResult，并将返回值赋值到activityResultLauncher
+@Override
+protected void onStart() {
+     activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                //在此处处理 onActivityResult 即可
+            }
+        });
+    super.onStart();
+}
+```
