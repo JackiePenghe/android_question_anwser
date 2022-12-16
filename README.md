@@ -230,3 +230,16 @@ private void toTargetActivity(){
     activityResultLauncher.launch(intent);
 }
 ```
+
+### 进入Activity时，不自动弹出软键盘
+
+1. 在 AndroidManifest.xml文件中的activity节点下添加如下代码
+
+```xml
+android:windowSoftInputMode="stateHidden|adjustPan"
+```
+
+2.在onCreate方法中调用如下代码
+```java
+getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+```
